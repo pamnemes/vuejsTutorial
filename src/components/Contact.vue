@@ -53,7 +53,7 @@ export default {
       disableButton: true
     }
   },
-  components: {aaa
+  components: {
     'text-word': {
       template: '<div>text word </div>'
     },
