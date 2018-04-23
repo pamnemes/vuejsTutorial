@@ -23,9 +23,8 @@ content
   <label for="comment">Comment:</label>
   <textarea class="form-control" rows="5" id="comment" v-model="form.Commentb"></textarea>
 </div>
-      <!-- <p>alert:{{alerttext}}</p> -->
-<button type="button" class="btn btn-success" v-on:click="activeLinkNext()" v-bind:disabled="!enableSubmitBtn">Next</button>
-{{enableSubmitBtn}}
+      <p>alert:{{alerttext}}</p>
+<button type="button" class="btn btn-success" v-on:click="activeLinkNext()" v-bind:class="{disabled: !enableSubmitBtn}">Next</button>
 </div>
 </div>
   <div v-show="!showform">
@@ -35,9 +34,8 @@ content
     <button type="button" class="btn btn-danger" v-on:click="activeLinkBlack()" >black</button>
     <button type="button" class="btn btn-success">send</button>
   </div>
-  {{alertextbox}}
-  <p v-show="!enableSubmitBtn">กรอกข้อมูลไม่ครบ</p>
-  </content-template>
+     <p>alert:{{alerttext}}</p>
+</content-template>
 
 </template>
 
@@ -65,7 +63,7 @@ export default {
         this.showform = false
         this.btncheck = false
         this.alerttext = 'กรอกข้อมูลครบ'
-      } else {ไๆพไๆำ
+      } else {vvv
         this.alerttext = 'กรอกข้อมูลไม่ครบ'
       }
     },
@@ -80,22 +78,10 @@ export default {
       return fullname
     },
     enableSubmitBtn () {
-      if (this.form.FirstName && this.form.LastName && this.form.Email) {
-        return true
-      } else {
+      if (this.form.firstName && this.form.LastName && this.from.Email) {
         return false
       }
     }
-    // alertextbox () {
-    //   var alertextbox = ''
-    //   if (this.form.FirstName && this.form.LastName && this.form.Email) {
-    //     alertextbox = 'กรอกข้อมูลครบ'
-    //     return alertextbox
-    //   } else {
-    //     alertextbox = 'กรอกข้อมูลไม่ครบ'
-    //     return alertextbox
-    //   }
-    // }
   }
 }
 </script>
