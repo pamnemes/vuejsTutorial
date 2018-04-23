@@ -65,7 +65,7 @@ export default {
         this.showform = false
         this.btncheck = false
         this.alerttext = 'กรอกข้อมูลครบ'
-      } else {vvv
+      } else {
         this.alerttext = 'กรอกข้อมูลไม่ครบ'
       }
     },
