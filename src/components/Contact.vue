@@ -76,7 +76,7 @@ export default {
   computed: {
     fullname: function () {
       var fullname = ''
-      fullname = this.form.FirstName + '  ' + this.form.LastName
+      fullname = this.form.FirstName + ' ' + this.form.LastName
       return fullname
     },
     enableSubmitBtn () {
